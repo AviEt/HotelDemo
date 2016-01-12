@@ -156,47 +156,48 @@ angular.module('starter.controllers', [])
     });
 })
 
-.controller('AlcoholCtrl', function($scope, $stateParams, $timeout, ionicMaterialMotion, ionicMaterialInk) {
+.controller('AlcoholCtrl', function($scope, $stateParams, $timeout, PurchaseService, ionicMaterialMotion,
+ionicMaterialInk) {
 
     $scope.alcohol = [
         {
             name: 'THE PEACOCK',
-            price: '19$',
+            price: 19,
             image: 'img/peacock_cocktail.jpg'
         },
         {
             name: 'PEACOCK ALLEY',
-            price: '24$',
+            price: 24,
             image: 'img/peacock_alley.jpg'
         },
         {
             name: 'NATASHA',
-            price: '19$',
+            price: 19,
             image: 'img/natasha.jpg'
         },
         {
             name: 'LEAVES OF GRASS',
-            price: '19$',
+            price: 19,
             image: 'img/leaves_of_grass.jpg'
         },
         {
             name: 'PLATINUM MARTINI',
-            price: '25$',
+            price: 25,
             image: 'img/platinum_martini.jpg'
         },
         {
             name: 'ROBERT BURNS',
-            price: '25$',
+            price: 25,
             image: 'img/robert_burns.jpg'
         },
         {
             name: '1860 MANHATTAN',
-            price: '22$',
+            price: 22,
             image: 'img/manhattan-cocktail-vt.jpg'
         },
         {
             name: 'MARTINEZ',
-            price: '20$',
+            price: 20,
             image: 'img/martinez.jpg'
         }
     ]
@@ -215,6 +216,10 @@ angular.module('starter.controllers', [])
     ionicMaterialMotion.fadeSlideInRight({
         selector: '.animate-fade-slide-in .item'
     });
+
+    $scope.purchase = function(item) {
+        PurchaseService.addPurchase(item.name, item.price);
+    }
 })
 
 
