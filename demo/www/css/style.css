@@ -38,6 +38,30 @@ p {
     background-color: #222;
 }
 
+.right-half-list {
+    padding-bottom: 0px !important;
+    padding-top: 0px !important;
+    padding-left: 0px !important;
+    padding-right: 1px !important;
+}
+
+.left-half-list {
+    padding-bottom: 0px !important;
+    padding-top: 0px !important;
+    padding-left: 1px !important;
+    padding-right: 0px !important;
+}
+
+.bottom-right {
+    position:fixed;
+    right:0;
+    bottom:0;
+    width:2em;
+    text-align:right;
+    padding-right: 40px;
+    padding-bottom: 10px
+}
+
 .menu h2 {
     bottom: 0;
     font-size: 18px;

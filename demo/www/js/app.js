@@ -116,6 +116,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'io
 
         }
     })
+    .state('app.alcohol', {
+            url: '/alcohol',
+            views: {
+                'menuContent': {
+                    templateUrl: 'templates/alcohol.html',
+                    controller: 'AlcoholCtrl'
+                }
+
+            }
+        })
     ;
 
     // if none of the above states are matched, use this as the fallback

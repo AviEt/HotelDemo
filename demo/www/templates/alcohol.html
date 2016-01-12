@@ -1,0 +1,78 @@
+<ion-view view-title="Room Service">
+    <ion-content ng-class="{expanded:isExpanded}" class="animate-fade-slide-in">
+        <div class="content">
+            <div class="right-half-list list condensed-space no-padding animate-blinds half">
+                <div class="card dark-bg">
+                    <a class="item clear-bg item-bg-image waves-effect waves-button waves-light has-mask-reverse" >
+                        <h3>THE PEACOCK</h3>
+                        <p><span class="bottom-right">19$</span></p>
+                        <img src="img/peacock_cocktail.jpg">
+                    </a>
+                </div>
+                <div class="card dark-bg">
+                    <a class="item clear-bg item-bg-image waves-effect waves-button waves-light has-mask-reverse">
+                        <h3>PEACOCK ALLEY</h3>
+                        <p><span class="bottom-right">24$</span></p>
+                        <img src="img/peacock_alley.jpg">
+                    </a>
+                </div>
+                <div class="card dark-bg">
+                    <a class="item clear-bg item-bg-image waves-effect waves-button waves-light has-mask-reverse" >
+                        <h3>NATASHA</h3>
+                        <p><span class="bottom-right">19$</span></p>
+                        <img src="img/natasha.jpg">
+                    </a>
+                </div>
+                <div class="card dark-bg">
+                    <a class="item clear-bg item-bg-image waves-effect waves-button waves-light has-mask-reverse" >
+                        <h3>LEAVES OF GRASS</h3>
+                        <p><span class="bottom-right">19$</span></p>
+                        <img src="img/leaves_of_grass.jpg">
+                    </a>
+                </div>
+
+            </div>
+            <div class="left-half-list list condensed-space no-padding animate-blinds half">
+                <div class="card dark-bg">
+                    <a class="item clear-bg item-bg-image waves-effect waves-button waves-light has-mask-reverse" >
+                        <h3>PLATINUM MARTINI</h3>
+                        <p><span class="bottom-right">25$</span></p>
+                        <img src="img/platinum_martini.jpg">
+                    </a>
+                </div>
+                <div class="card dark-bg">
+                    <a class="item clear-bg item-bg-image waves-effect waves-button waves-light has-mask-reverse">
+                        <h3>ROBERT BURNS</h3>
+                        <p><span class="bottom-right">25$</span></p>
+                        <img src="img/robert_burns.jpg">
+                    </a>
+                </div>
+                <div class="card dark-bg">
+                    <a class="item clear-bg item-bg-image waves-effect waves-button waves-light has-mask-reverse" >
+                        <h3>1860 MANHATTAN</h3>
+                        <p><span class="bottom-right">22$</span></p>
+                        <img src="img/manhattan-cocktail-vt.jpg">
+                    </a>
+                </div>
+                <div class="card dark-bg">
+                    <a class="item clear-bg item-bg-image waves-effect waves-button waves-light has-mask-reverse" >
+                        <h3>MARTINEZ</h3>
+                        <p><span class="bottom-right">20$</span></p>
+                        <img src="img/martinez.jpg">
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        <script src="../../../bower_components/waves/dist/waves.min.js"></script>
+        <script src="../js/material-ionic.js"></script>
+        <script>
+        Waves.displayEffect();
+        setTimeout(function() {
+            Mi.motion.blindsDown({
+                selector: '.card'
+            });
+        }, 500);
+        </script>
+    </ion-content>
+</ion-view>
