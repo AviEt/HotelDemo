@@ -73,12 +73,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'io
         }
     })
 
-    .state('app.gallery', {
-        url: '/gallery',
+    .state('app.mainmenu', {
+        url: '/mainmenu',
         views: {
             'menuContent': {
-                templateUrl: 'templates/gallery.html',
-                controller: 'GalleryCtrl'
+                templateUrl: 'templates/mainmenu.html',
+                controller: 'MainMenuCtrl'
             }
         }
     })
