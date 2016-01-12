@@ -138,7 +138,8 @@ angular.module('starter.controllers', [])
     // Set Ink
     ionicMaterialInk.displayEffect();
 })
-.controller('CheckOutCtrl', function($scope, $stateParams, $timeout, PurchaseService, ionicMaterialMotion,
+.controller('CheckOutCtrl', function($scope, $stateParams, $timeout, $http, BASE_URL, CUSTOMER_EMAIL, PurchaseService,
+ionicMaterialMotion,
 ionicMaterialInk) {
     // Set Header
     $scope.$parent.showHeader();
@@ -147,6 +148,7 @@ ionicMaterialInk) {
     $scope.$parent.setExpanded(false);
     $scope.$parent.setHeaderFab(false);
 
+    $scope.paid = false;
     $scope.total = PurchaseService.total();
 
     // Set Motion
@@ -164,6 +166,19 @@ ionicMaterialInk) {
 
     // Set Ink
     ionicMaterialInk.displayEffect();
+
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open("GET", "http://manager.infinithing.com/deploy/bh/clientTokenWithAmount?amount=" + $scope.total, false);
+    xmlHttp.send(null);
+    var clientToken = xmlHttp.responseText;
+    braintree.setup(clientToken, "dropin", {
+      container: "payment-form"
+    });
+
+    $scope.checkout = function() {
+        $scope.paid = true;
+        $http.get(BASE_URL + "/battle_hack/completed-delivery?amount=" + $scope.total + "&to=" + CUSTOMER_EMAIL);
+    }
 })
 .controller('RoomServiceCtrl', function($scope, $stateParams, $timeout, ionicMaterialMotion, ionicMaterialInk) {
     $scope.$parent.showHeader();
