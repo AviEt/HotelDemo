@@ -96,12 +96,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'io
         }
     })
 
-    .state('app.profile', {
-        url: '/profile',
+    .state('app.checkin', {
+        url: '/checkin',
         views: {
             'menuContent': {
-                templateUrl: 'templates/profile.html',
-                controller: 'ProfileCtrl'
+                templateUrl: 'templates/checkin.html',
+                controller: 'CheckInCtrl'
             },
         }
     })
