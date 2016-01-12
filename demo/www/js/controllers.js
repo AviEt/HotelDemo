@@ -139,6 +139,23 @@ angular.module('starter.controllers', [])
     ionicMaterialInk.displayEffect();
 })
 
+.controller('RoomServiceCtrl', function($scope, $stateParams, $timeout, ionicMaterialMotion, ionicMaterialInk) {
+    $scope.$parent.showHeader();
+    $scope.$parent.clearFabs();
+    $scope.$parent.setExpanded(false);
+    $scope.$parent.setHeaderFab(false);
+
+    // Activate ink for controller
+    ionicMaterialInk.displayEffect();
+
+    ionicMaterialMotion.pushDown({
+        selector: '.push-down'
+    });
+    ionicMaterialMotion.fadeSlideInRight({
+        selector: '.animate-fade-slide-in .item'
+    });
+})
+
 .controller('ActivityCtrl', function($scope, $stateParams, $timeout, ionicMaterialMotion, ionicMaterialInk) {
     $scope.$parent.showHeader();
     $scope.$parent.clearFabs();

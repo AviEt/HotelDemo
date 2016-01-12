@@ -105,6 +105,17 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'io
             },
         }
     })
+
+    .state('app.room-service', {
+        url: '/room-service',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/room-service.html',
+                controller: 'RoomServiceCtrl'
+            }
+
+        }
+    })
     ;
 
     // if none of the above states are matched, use this as the fallback
