@@ -1,72 +1,51 @@
-<ion-view view-title="Gallery">
+<ion-view view-title="Welcome">
     <ion-content ng-class="{expanded:isExpanded}" class="animate-fade-slide-in">
-        <div class="list half">
-            <div ui-sref="app.profile" class="card card-gallery item item-text-wrap">
-                <div class="ink dark-bg">
-                    <h2>Where's Elsa?</h2>
-                    <img class="full-image" src="img/sansa-snowcastle3.jpg">
-                </div>
-                <div class="item tabs tabs-secondary tabs-icon-left">
-                    <a class="tab-item stable-bg assertive">
-                        <i class="icon ion-heart"></i>
-                        4
-                    </a>
-                    <a class="tab-item stable-bg positive-900">
-                        <i class="icon ion-chatbubbles"></i>
-                        2
-                    </a>
-                </div>
+        <div class="list condensed-space no-padding animate-blinds">
+            <div class="card dark-bg">
+                <a class="item clear-bg item-bg-image waves-effect waves-button waves-light has-mask-reverse" >
+                    <h2>Toronto</h2>
+                    <p>Drake's Raptastic Raptors</p>
+                    <img src="img/sansa-snowcastle3.jpg">
+                </a>
             </div>
-            <div ui-sref="app.profile" class="card card-gallery item item-text-wrap">
-                <div class="ink dark-bg">
-                    <h2>Hmm. Hope nobody destroys this!</h2>
-                    <img class="full-image" src="img/sansa-snowcastle.png">
-                </div>
-                <div class="item tabs tabs-secondary tabs-icon-left">
-                    <a class="tab-item stable-bg assertive">
-                        <i class="icon ion-heart"></i>
-                        6
-                    </a>
-                    <a class="tab-item stable-bg positive-900">
-                        <i class="icon ion-chatbubbles"></i>
-                        1
-                    </a>
-                </div>
+            <div class="card energized-bg">
+                <a class="item clear-bg item-bg-image waves-effect waves-button waves-light has-mask-reverse" >
+                    <h2>Scotland</h2>
+                    <p>Land of Unicorns</p>
+                    <img src="img/sansa-snowcastle3.jpg">
+                </a>
             </div>
-        </div>
-        <div class="list half">
-            <div ui-sref="app.profile" class="card card-gallery item item-text-wrap">
-                <div class="ink dark-bg">
-                    <h2>Making Olaf a House</h2>
-                    <img class="full-image" src="img/sansa-snowcastle2.jpg">
-                </div>
-                <div class="item tabs tabs-secondary tabs-icon-left">
-                    <a class="tab-item stable-bg assertive">
-                        <i class="icon ion-heart"></i>
-                        22
-                    </a>
-                    <a class="tab-item stable-bg positive-900">
-                        <i class="icon ion-chatbubbles"></i>
-                        9
-                    </a>
-                </div>
+            <div class="card assertive-bg">
+                <a class="item clear-bg item-bg-image waves-effect waves-button waves-light has-mask-reverse" >
+                    <h2>Kyoto</h2>
+                    <p>Cultural Experience</p>
+                    <img src="img/sansa-snowcastle3.jpg">
+                </a>
             </div>
-            <div ui-sref="app.profile" class="card card-gallery item item-text-wrap">
-                <div class="ink dark-bg">
-                    <h2>ohai!</h2>
-                    <img class="full-image" src="img/sansa-snowcastle4.jpg">
-                </div>
-                <div class="item tabs tabs-secondary tabs-icon-left">
-                    <a class="tab-item stable-bg assertive">
-                        <i class="icon ion-heart"></i>
-                        8
-                    </a>
-                    <a class="tab-item stable-bg positive-900">
-                        <i class="icon ion-chatbubbles"></i>
-                        0
-                    </a>
-                </div>
+            <div class="card balanced-bg">
+                <a class="item clear-bg item-bg-image waves-effect waves-button waves-light has-mask-reverse" >
+                    <h2>New Zealand</h2>
+                    <p>More Than the Other Down Under</p>
+                    <img src="img/sansa-snowcastle3.jpg">
+                </a>
+            </div>
+            <div class="card royal-bg">
+                <a class="item clear-bg item-bg-image waves-effect waves-button waves-light has-mask-reverse" >
+                    <h2>Hawai'i</h2>
+                    <p>Paradise Getaway</p>
+                    <img src="img/sansa-snowcastle3.jpg">
+                </a>
             </div>
         </div>
+        <script src="../../../bower_components/waves/dist/waves.min.js"></script>
+        <script src="../js/material-ionic.js"></script>
+        <script>
+        Waves.displayEffect();
+        setTimeout(function() {
+            Mi.motion.blindsDown({
+                selector: '.card'
+            });
+        }, 500);
+        </script>
     </ion-content>
 </ion-view>
