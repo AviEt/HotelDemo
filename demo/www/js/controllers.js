@@ -218,17 +218,19 @@ ionicMaterialInk) {
     });
 
     $scope.purchase = function(item) {
-        PurchaseService.addPurchase(item.name, item.price);
+        PurchaseService.addPurchase(item.name, item.price, item.image);
     }
 })
 
 
-.controller('ActivityCtrl', function($scope, $stateParams, $timeout, ionicMaterialMotion, ionicMaterialInk) {
+.controller('ActivityCtrl', function($scope, $stateParams, $timeout, PurchaseService, ionicMaterialMotion,
+ionicMaterialInk) {
     $scope.$parent.showHeader();
     $scope.$parent.clearFabs();
-    $scope.isExpanded = true;
-    $scope.$parent.setExpanded(true);
-    $scope.$parent.setHeaderFab('right');
+    $scope.$parent.setExpanded(false);
+    $scope.$parent.setHeaderFab(false);
+
+    $scope.purchases = PurchaseService.all();
 
     $timeout(function() {
         ionicMaterialMotion.fadeSlideIn({

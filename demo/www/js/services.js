@@ -11,7 +11,7 @@ angular.module('starter.services', [])
 
        return {
          all: function() {
-           return deliveries;
+           return purchases;
          },
          remove: function(purchase) {
            purchases.splice(purchases.indexOf(purchase), 1);
@@ -24,10 +24,11 @@ angular.module('starter.services', [])
            }
            return null;
          },
-         addPurchase: function(item, price) {
+         addPurchase: function(item, price, image) {
             var purchase = {
                 item: item,
                 price: price,
+                image: image
             }
 
             purchase.time = new Date().getTime();

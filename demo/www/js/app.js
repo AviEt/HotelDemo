@@ -43,14 +43,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
             'menuContent': {
                 templateUrl: 'templates/activity.html',
                 controller: 'ActivityCtrl'
-            },
-            'fabContent': {
-                template: '<button id="fab-activity" class="button button-fab button-fab-top-right expanded button-energized-900 flap"><i class="icon ion-paper-airplane"></i></button>',
-                controller: function ($timeout) {
-                    $timeout(function () {
-                        document.getElementById('fab-activity').classList.toggle('on');
-                    }, 200);
-                }
             }
         }
     })
