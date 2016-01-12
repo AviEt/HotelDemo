@@ -232,6 +232,11 @@ ionicMaterialInk) {
 
     $scope.purchases = PurchaseService.all();
 
+    $scope.total = function() {
+        if($scope.purchases == 0) return 0;
+        return PurchaseService.total();
+    }
+
     $timeout(function() {
         ionicMaterialMotion.fadeSlideIn({
             selector: '.animate-fade-slide-in .item'

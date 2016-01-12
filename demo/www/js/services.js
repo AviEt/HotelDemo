@@ -13,6 +13,13 @@ angular.module('starter.services', [])
          all: function() {
            return purchases;
          },
+         total: function() {
+            var total = 0;
+            for (var i = 0; i < purchases.length; i++) {
+              total += purchases[i].price;
+            }
+            return total;
+         },
          remove: function(purchase) {
            purchases.splice(purchases.indexOf(purchase), 1);
          },

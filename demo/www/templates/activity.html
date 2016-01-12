@@ -1,12 +1,17 @@
 <ion-view view-title="Purchases">
     <ion-content ng-class="{expanded:isExpanded}" class="animate-fade-slide-in">
-        <di class="item card-item" ng-repeat="purchase in purchases">
+        <div class="item card-item">
+            <div class="card stable-bg ink ink-dark">
+                <p style="padding:10px"><strong>Total: {{total()}}$</strong></p>
+            </div>
+        </div>
+        <div class="item card-item" ng-repeat="purchase in purchases">
             <div ui-sref="app.mainmenu" class="card stable-bg ink ink-dark">
                 <div class="item item-avatar item-text-wrap">
                     <span class="avatar" ng-style="{'background-image':'url({{purchase.image}})'}"></span>
                     <strong>{{purchase.item}}</strong>&nbsp;&nbsp;&nbsp;&nbsp;{{purchase.price}} $
                 </div>
             </div>
-        </di>
+        </div>
     </ion-content>
 </ion-view>
