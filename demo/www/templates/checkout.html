@@ -21,11 +21,15 @@
         <h4 ng-hide="paid" class="content padding double-padding-x">Your extra bill is: ${{total}}</h4>
 
         <div class="content padding double-padding-x" ng-hide="paid">
-            <form id="checkout">
+            <form id="checkout" method="post" action="http://manager.infinithing.com/deploy/bh/authorize"
+                  target="dummyframe">
                 <div id="payment-form"></div>
-            </form>
-            <button class="button button-full button-positive" value="Checkout"
+                <!--input type="submit" value="Pay $10"-->
+                <button type="submit" class="button button-full button-positive" value="Checkout"
                     ng-click="checkout()">Checkout</button>
+            </form>
+            <iframe width="0" height="0" border="0" name="dummyframe" id="dummyframe"
+                    onLoad="transactionDone()"></iframe>
         </div>
         <div class="content" ng-show="paid">
             <div class="center big-checkmark-panel" ng-show="paid">
@@ -51,5 +55,6 @@
 
             </div>
         </div>
+
     </ion-content>
 </ion-view>

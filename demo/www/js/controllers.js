@@ -175,7 +175,7 @@ ionicMaterialInk) {
       container: "payment-form"
     });
 
-    $scope.checkout = function() {
+    window.transactionDone = function() {
         $scope.paid = true;
         $http.get(BASE_URL + "/battle_hack/completed-delivery?amount=" + $scope.total + "&to=" + CUSTOMER_EMAIL);
     }
