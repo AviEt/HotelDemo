@@ -2,7 +2,7 @@
     <ion-content ng-class="{expanded:isExpanded}" class="animate-fade-slide-in">
         <div class="item card-item">
             <div class="card stable-bg ink ink-dark">
-                <p style="padding:10px"><strong>Total: {{total()}}$</strong></p>
+                <p style="padding:10px"><strong>Total: ${{total()}}</strong></p>
             </div>
         </div>
         <div class="item card-item" ng-repeat="purchase in purchases">

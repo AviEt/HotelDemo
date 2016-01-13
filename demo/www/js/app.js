@@ -6,7 +6,7 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'ionic-material', 'ionMdInput'])
 .constant("BASE_URL", "http://manager.infinithing.com/deploy")
-.constant("CUSTOMER_EMAIL", "avi.etzioni@gmail.com")
+.constant("CUSTOMER_EMAIL", "bantalon@gmail.com")
 .run(function($ionicPlatform) {
     $ionicPlatform.ready(function() {
         // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
