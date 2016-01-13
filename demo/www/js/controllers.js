@@ -260,6 +260,11 @@ ionicMaterialInk) {
 
     $scope.purchase = function(item) {
         PurchaseService.addPurchase(item.name, item.price, item.image);
+        mixpanel.track("Purchased Alcohol", {
+                "Name": item.name,
+                "Price": item.price,
+                "id": "efrat@innspark.com"
+            });
     }
 })
 
